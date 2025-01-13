@@ -1,4 +1,4 @@
-name: Terraform Deploy 9
+name: Terraform Deploy 10
 
 on:
   workflow_dispatch:
