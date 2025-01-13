@@ -1,5 +1,5 @@
-resource "aws_iam_role" "runnerrole179" {
-  name               = "EC2RunnerRole179"
+resource "aws_iam_role" "runnerrole175" {
+  name               = "EC2RunnerRole175"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -9,7 +9,7 @@ resource "aws_iam_role" "runnerrole179" {
       "Principal": {
         "Service": "ec2.amazonaws.com"
       },
-      "Action": "sts:AssumeRole179"
+      "Action": "sts:AssumeRole175"
     }
   ]
 }
@@ -17,13 +17,13 @@ EOF
 }
 
 resource "aws_iam_role_policy_attachment" "admin_access" {
-  role       = aws_iam_role.runnerrole179.name
+  role       = aws_iam_role.runnerrole175.name
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
 resource "aws_iam_instance_profile" "runnerinstance-profile" {
   name = "Github-runner-profile"
-  role = aws_iam_role.runnerrole179.name
+  role = aws_iam_role.runnerrole175.name
 }
 
 resource "aws_security_group" "runner-sg" {
