@@ -1,4 +1,4 @@
-resource "aws_iam_role" "runnerrole175" {
+resource "aws_iam_role" "runnerrole175" { 
   name               = "EC2RunnerRole175"
   assume_role_policy = <<EOF
 {
@@ -92,5 +92,5 @@ resource "aws_instance" "runner-ec2" {
 
   tags = {
     Name = "GITHUBRUNNER"
-  }
+  } 
 }
