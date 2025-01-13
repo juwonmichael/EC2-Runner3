@@ -22,7 +22,7 @@ resource "aws_iam_role_policy_attachment" "admin_access" {
 }
 
 resource "aws_iam_instance_profile" "runnerinstance_profile" {
-  name = "Github-runner-profile"
+  name = "Github-runner-profile2"
   role = aws_iam_role.runnerrole175.name
 }
 
