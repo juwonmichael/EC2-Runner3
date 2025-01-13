@@ -9,7 +9,7 @@ resource "aws_iam_role" "runnerrole175" {
       "Principal": {
         "Service": "ec2.amazonaws.com"
       },
-      "Action": "sts:AssumeRole175"
+      "Action": "sts:AssumeRole"
     }
   ]
 }
