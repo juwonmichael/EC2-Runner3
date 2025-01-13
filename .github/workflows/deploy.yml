@@ -1,4 +1,4 @@
-name: Terraform Deploy 6
+name: Terraform Deploy 7
 
 on:
   workflow_dispatch:
