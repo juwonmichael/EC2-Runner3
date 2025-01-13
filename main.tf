@@ -21,8 +21,8 @@ resource "aws_iam_role_policy_attachment" "admin_access" {
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
-resource "aws_iam_instance_profile" "runnerinstance-profile179" {
-  name = "Github-runner-profile179"
+resource "aws_iam_instance_profile" "runnerinstance_profile" {
+  name = "Github-runner-profile"
   role = aws_iam_role.runnerrole175.name
 }
 
@@ -82,7 +82,7 @@ resource "aws_instance" "runner-ec2" {
   instance_type          = "t2.large"
   key_name               = "monday_keys"
   vpc_security_group_ids = [aws_security_group.runner-sg.id]
-  iam_instance_profile   = aws_iam_instance_profile.runnerinstance-profile.name
+  iam_instance_profile   = aws_iam_instance_profile.runnerinstance_profile.name
 
   root_block_device {
     volume_size = 30
