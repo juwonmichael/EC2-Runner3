@@ -17,13 +17,13 @@ EOF
 }
 
 resource "aws_iam_role_policy_attachment" "admin_access" {
-  role       = aws_iam_role.runnerrole.name
+  role       = aws_iam_role.runnerrole179.name
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
 resource "aws_iam_instance_profile" "runnerinstance-profile" {
   name = "Github-runner-profile"
-  role = aws_iam_role.runnerrole.name
+  role = aws_iam_role.runnerrole179.name
 }
 
 resource "aws_security_group" "runner-sg" {
