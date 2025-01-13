@@ -21,7 +21,7 @@ resource "aws_iam_role_policy_attachment" "admin_access" {
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
-resource "aws_iam_instance_profile179" "runnerinstance-profile179" {
+resource "aws_iam_instance_profile" "runnerinstance-profile179" {
   name = "Github-runner-profile179"
   role = aws_iam_role.runnerrole175.name
 }
